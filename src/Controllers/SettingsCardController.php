@@ -41,7 +41,7 @@ class SettingsCardController extends Controller
         });
 
         setting()->save();
-
+        var_dump($request);
         return response()->json([
             'success' => true,
             'data' => $fields2
