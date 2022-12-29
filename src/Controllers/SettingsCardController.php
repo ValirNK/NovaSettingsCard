@@ -44,7 +44,7 @@ class SettingsCardController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $fields2
+            'data' => $$request->all()
         ]);
     }
 
