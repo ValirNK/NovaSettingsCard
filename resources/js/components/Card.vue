@@ -135,7 +135,7 @@ export default {
         actionFormData() {
             let dataForm = _.tap(new FormData(), formData => {
                 let tab = _.find(this.card.fields, ['key', this.activeTab]);
-                console.log(tab.fields);
+                console.log(formData.entries());
                 _.each(tab.fields, field => {
                     field.fill(formData);
                 })
