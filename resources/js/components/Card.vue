@@ -136,14 +136,13 @@ export default {
             let dataForm = _.tap(new FormData(), formData => {
                 let tab = _.find(this.card.fields, ['key', this.activeTab]);
                 _.each(tab.fields, field => {
-                    console.log(formData);
                     field.fill(formData);
                 })
             })
 
             dataForm.append('disks', JSON.stringify(this.card.disks));
 
-
+            console.log(dataForm);
             return dataForm;
         },
     }
