@@ -23,6 +23,9 @@ class SettingsCardController extends Controller
         $fields = collect($request->except('disks'))->reject(function ($value, $key) {
             return Str::contains($key, 'DraftId');
         });
+        $fields2 = collect($request->except('disks'))->reject(function ($value, $key) {
+            return Str::contains($key, 'DraftId');
+        });
 
         $this->disks = collect(json_decode($request->get('disks')));
 
@@ -41,7 +44,7 @@ class SettingsCardController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $fields
+            'data' => $fields2
         ]);
     }
 
