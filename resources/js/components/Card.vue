@@ -111,7 +111,7 @@ export default {
 
         saveSettings() {
             let data = this.actionFormData()
-
+            console.log(data);
             Nova.request()
                 .post('/nova-vendor/settings-card/save-settings', data)
                 .then(response => {
@@ -142,7 +142,7 @@ export default {
 
             dataForm.append('disks', JSON.stringify(this.card.disks));
 
-            console.log(dataForm);
+            
             return dataForm;
         },
     }
