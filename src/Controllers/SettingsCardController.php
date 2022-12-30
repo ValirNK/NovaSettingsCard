@@ -43,8 +43,7 @@ class SettingsCardController extends Controller
         setting()->save();
 
         return response()->json([
-            'success' => true,
-            'data' => $request->all()
+            'success' => true
         ]);
     }
 

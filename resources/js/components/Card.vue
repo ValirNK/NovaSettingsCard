@@ -24,6 +24,7 @@
                     v-if="tab.key == activeTab"
                     :label="tab.name"
                     :key="'related-tabs-fields' + index"
+                    :class="'setting-card-'+tab.key"
                   >
 
                     <div v-if="tab.init">
