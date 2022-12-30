@@ -30,7 +30,6 @@
                     <div v-if="tab.init">
                         <form autocomplete="off" v-on:submit.prevent="saveSettings">
                             <template v-for="field in tab.fields">
-                                {{ field }}
                                 <component
                                   :is="'form-' + field.component"
                                   :errors="errorData"
